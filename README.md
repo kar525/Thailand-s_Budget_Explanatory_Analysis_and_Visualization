@@ -63,5 +63,6 @@
 
 # <h3>งบประมาณถูกจัดสรรอย่างไรในแง่พื้นที่?</h3>
 <h4>การจัดสรรงบประมาณถูกจัดสรรในแง่พื้นที่ (ส่วนภูมิภาค)</h3>
-![image](https://github.com/user-attachments/assets/514f87e9-02b2-4773-83a7-8b588abb641e)
+![image](https://github.com/user-attachments/assets/a6732e2c-43c6-4a1f-a66d-e427df126c0d)
+
 
