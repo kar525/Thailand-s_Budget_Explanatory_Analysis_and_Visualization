@@ -66,7 +66,7 @@
 
 ![image](https://github.com/user-attachments/assets/a6732e2c-43c6-4a1f-a66d-e427df126c0d)
 
-<div style="overflow-y: scroll; height: 200px;">
+<div style="overflow-y: scroll; height: 50px;">
 
 |index|BUDGETARY\_UNIT|2023|2024|2025|2023\_rank|2024\_rank|2025\_rank|2023\_2024\_change|2024\_2025\_change|Mean\_of\_Absolute\_change|
 |---|---|---|---|---|---|---|---|---|---|---|
