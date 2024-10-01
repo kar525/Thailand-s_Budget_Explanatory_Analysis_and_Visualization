@@ -185,7 +185,7 @@
 
 -และโดยภาพรวมรัฐบาลมีการขาดดุลทางการเงินเพิ่มขึ้นอย่างต่อเนื่องทุกปี
 
-                                    Correlation Matrix
+<h6>                                    Correlation Matrix                             </h6>
 ![image](https://github.com/user-attachments/assets/1eb8d702-b607-4add-8243-3f514deb8100)
 
 จาก correlation matrix จะเห็นได้ว่า งบประมาณมีCorrelationกับปีและรายได้ของรัฐบาลในทิศทางบวกค่อนข้างสูง และมีCorrelationกับค่าดุลงบประมาณในทางลบค่อนข้างสูง โดยจะเลือกตัวแปรดังที่กล่าวที่มี Strong Correlation มาทำโมเดลพยากรณ์จัดสรรงบประมาณด้วย Multiple linear regression
