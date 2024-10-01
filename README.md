@@ -176,9 +176,10 @@
 
 
 # <h4>วิเคราะห์ภาพรวมการของจัดสรรงบประมาณรายปีเปรียบเทียบกับตัวชี้วัดทางเศรษฐกิจ และการพยากรณ์การจัดสรรงบประมาณ</h4>
+![image](https://github.com/user-attachments/assets/edefaf5b-e8a4-41da-83e2-90ccbcafd807)
 
 
-```bash
-# คำสั่งสำหรับการติดตั้ง
-pip install -r requirements.txt
+![image](https://github.com/user-attachments/assets/1eb8d702-b607-4add-8243-3f514deb8100)
+
+
 
