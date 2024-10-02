@@ -189,6 +189,46 @@
 
 ![image](https://github.com/user-attachments/assets/1eb8d702-b607-4add-8243-3f514deb8100)
 
-จาก correlation matrix จะเห็นได้ว่า งบประมาณมีCorrelationกับปีและรายได้ของรัฐบาลในทิศทางบวกค่อนข้างสูง และมีCorrelationกับค่าดุลงบประมาณในทางลบค่อนข้างสูง โดยจะเลือกตัวแปรดังที่กล่าวที่มี Strong Correlation มาทำโมเดลพยากรณ์จัดสรรงบประมาณด้วย Multiple Linear Regression 
+จาก correlation matrix จะเห็นได้ว่า งบประมาณมีCorrelationกับปีและรายได้ของรัฐบาลในทิศทางบวกค่อนข้างสูง และมีCorrelationกับค่าดุลงบประมาณในทางลบค่อนข้างสูง โดยจะเลือกตัวแปรดังที่กล่าวที่มี Strong Correlation มาทำโมเดลพยากรณ์การจัดสรรงบประมาณด้วย Multiple Linear Regression 
+```bash
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.linear_model import Lasso
 
 
+# 1. สร้าง DataFrame หรือโหลดข้อมูล
+# สมมติว่า df คือ DataFrame ที่มีข้อมูลของคุณ
+# แยก features (X) และ target (y)
+X = modeltrain  # ใส่ชื่อคอลัมน์ที่เป็น features ของคุณ
+y = Y   # ใส่ชื่อคอลัมน์ที่เป็น target
+
+# 2. แบ่งข้อมูลเป็นชุด train และ test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 3. สร้างโมเดลและฝึกสอน
+alpha = 0.5  # ปรับค่า alpha ตามความเหมาะสม
+model = Lasso(alpha=alpha)
+model.fit(X_train, y_train)
+
+# 4. ทำนายค่า
+y_pred = model.predict(X_test)
+
+# 5. ประเมินผลโมเดล
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print(f"Mean Squared Error: {mse}")
+print(f"R^2 Score: {r2}")
+"Mean Squared Error: 5.7630612197744676e-08
+R^2 Score: 1.0"
+new_data = pd.DataFrame({
+    'ปี': [2569],  # แทนที่ value1 ด้วยค่าที่ต้องการทำนาย
+    'รายได้รัฐบาล (ล้านบาท)': [3000000],  # แทนที่ value2 ด้วยค่าที่ต้องการทำนาย
+    'ดุล': [-1000000]   # แทนที่ value3 ด้วยค่าที่ต้องการทำนาย
+})
+predictions = model.predict(new_data)
+predictions
+"array([4000000.00044755])"
+```
